@@ -93,4 +93,18 @@ public class StockManager
             System.out.println(product);
         }
     }
+    
+    /**
+     * Método que imprime los detalles de todos los productos cuyo stock está por debajo de un 
+     * determinado número que será pasado como parámetro al método.
+     */
+    public void underGivenNumberInStock(int cantidad)
+    {
+        for (Product producto : stock) {
+            if (numberInStock(producto.getID()) < cantidad) {
+                System.out.println(producto);
+            }
+        }
+    
+    }
 }
