@@ -107,10 +107,30 @@ public class StockManager
     public void underGivenNumberInStock(int cantidad)
     {
         for (Product producto : stock) {
-            if (numberInStock(producto.getID()) < cantidad) {
+            if (producto.getQuantity() < cantidad) {
                 System.out.println(producto);
             }
         }
+    }
     
+    /**
+     *implementa un método en la clase StockManager que permita encontrar productos por su nombre en vez de por su id. 
+     *En caso de no encontrarse una coincidencia exacta el método devuelve null. La cabecera del método debe ser
+     *public Product findProduct(String name)
+     */
+    public Product findProduct(String name)
+    {
+        Product producto = null;
+        int index = 0;
+        boolean buscar = true;
+        int numeroProductos = stock.size();
+        while (index < numeroProductos && buscar) {
+            if (stock.get(index).getName().equals(name)) {
+                producto = stock.get(index);
+                buscar = false;
+            }
+            index++;
+        }
+        return producto;
     }
 }
