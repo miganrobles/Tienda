@@ -114,9 +114,8 @@ public class StockManager
     }
     
     /**
-     *implementa un método en la clase StockManager que permita encontrar productos por su nombre en vez de por su id. 
-     *En caso de no encontrarse una coincidencia exacta el método devuelve null. La cabecera del método debe ser
-     *public Product findProduct(String name)
+     * Método que permite encontrar productos por su nombre en vez de por su id. 
+     * En caso de no encontrarse una coincidencia exacta el método devuelve null.
      */
     public Product findProduct(String name)
     {
